@@ -65,6 +65,9 @@ body {
   .thumbnail {}
   .name {
     display: block;
+    p {
+      margin: 10px 0 0 10px;
+    }
   }
 }
 
@@ -92,4 +95,12 @@ body {
 .edit-links {
   margin-top: 20px;
   margin-bottom: 40px;
+}
+
+.form-container {
+  margin: 0 1em 0 1em;
+}
+
+.page-header {
+  margin-top: 20px;
 }

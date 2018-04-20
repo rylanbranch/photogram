@@ -1,7 +1,8 @@
-<h1>New Post</h1>
-
-<%= simple_form_for @post do |f| %>
-  <%= f.file_field :image, as: :file %>
-  <%= f.input :caption %>
-  <%= f.button :submit %>
-<% end %>
+<div class='form-container'>
+  <h1 class="page-header">New Post</h1>
+  <%= simple_form_for @post do |f| %>
+    <div class="form-group text-center"><%= f.file_field :image, as: :file %></div>
+    <div class="form-group text-center"><%= f.input :caption, class:'form-control' %></div>
+    <%= f.button :submit, class:'btn btn-success' %>
+  <% end %>
+</div>
