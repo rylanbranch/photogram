@@ -1,0 +1,15 @@
+<h1 class="page-header">Edit Post</h1>
+<div class="posts-wrapper row">
+  <div class="post">
+    <div class="image center-block">
+      <%= image_tag(@post.image.url(:medium), class:'image-responsive') %>
+    </div>
+  </div>
+</div>
+<%= render 'layouts/post_form' %>
+<div class="text-center edit-links">
+  <%= link_to "Delete", post_path(@post), method: :delete,
+               data: { confirm: "Delete this post?" } %>
+  |
+  <%= link_to "Cancel", post_path(@post) %>
+</div>

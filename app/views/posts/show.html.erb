@@ -2,7 +2,7 @@
   <div class="post">
     <div class="post-head">
       <div class="name">
-        <p>Rylan Branch</p>
+        <p><%= @post.user.username %></p>
       </div>
     </div>
     <div class="image center-block">
@@ -13,7 +13,9 @@
     </p>
   </div>
   <p class="text-center edit-links">
-    <%= link_to "Edit", edit_post_path %>
-    <%= link_to "Back", posts_path %>
+    <% if @post.user_id == current_user.try(:id) %>
+      <%= link_to "Edit", edit_post_path %> | 
+    <% end %>
+    <%= link_to "Back", root_path %>
   </p>
 </div>
